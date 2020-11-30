@@ -42,12 +42,10 @@ public class Registrarse extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnIniciarSecion = new keeptoo.KButton();
         kButton4 = new keeptoo.KButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txt_Usuario = new javax.swing.JTextField();
         txt_Contraseña = new javax.swing.JPasswordField();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -119,22 +117,6 @@ public class Registrarse extends javax.swing.JFrame {
         });
         kGradientPanel1.add(kButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 110, 40));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel3.setText("x");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-        kGradientPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, 10, 20));
-
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Admin_2.png"))); // NOI18N
-        kGradientPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 60, 70));
-
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("Usuario");
@@ -157,12 +139,10 @@ public class Registrarse extends javax.swing.JFrame {
         txt_Contraseña.setOpaque(false);
         kGradientPanel1.add(txt_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 290, 30));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mariano.png"))); // NOI18N
-        jLabel7.setText("LOGIN");
-        kGradientPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, 70));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("LOGIN");
+        kGradientPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 90, 50));
 
         getContentPane().add(kGradientPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 995, 574));
 
@@ -186,11 +166,6 @@ public class Registrarse extends javax.swing.JFrame {
         new Drag(kGradientPanel1).onPress(evt);
         
     }//GEN-LAST:event_kGradientPanel1MousePressed
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jLabel3MouseClicked
 
     private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButton4ActionPerformed
   
@@ -217,14 +192,13 @@ public class Registrarse extends javax.swing.JFrame {
 
             try{
 
-        Connection cn = DriverManager.getConnection(Contenedor.BD,Contenedor.Usuario,Contenedor.Contraseña);
-
-                PreparedStatement pst = cn.prepareStatement("select * from usuarios  where NombreUsuario = ?");
+     Connection cn = DriverManager.getConnection(Contenedor.BD, Contenedor.Usuario, Contenedor.Contraseña);
+                PreparedStatement pst = cn.prepareStatement("select * from usuario  where NombreUsuario = ?");
 
                 pst.setString(1, txt_Usuario.getText().trim());
                 ResultSet rs = pst.executeQuery();
 
-                PreparedStatement pst2 = cn.prepareStatement("select * from usuarios  where Pass = ?");
+                PreparedStatement pst2 = cn.prepareStatement("select * from usuario  where Pass = ?");
 
                 pst2.setString(1, txt_Contraseña.getText().trim());
                 ResultSet rs2 = pst2.executeQuery();
@@ -311,10 +285,8 @@ public class Registrarse extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private keeptoo.KButton btnIniciarSecion;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private keeptoo.KButton kButton4;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JPasswordField txt_Contraseña;

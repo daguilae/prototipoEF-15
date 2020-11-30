@@ -44,19 +44,14 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         kGradientPanel1 = new keeptoo.KGradientPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         txt_Nombre = new javax.swing.JTextField();
         txt_Contraseña = new javax.swing.JTextField();
-        txt_Correo = new javax.swing.JTextField();
         btnRegistrar = new keeptoo.KButton();
         kButton5 = new keeptoo.KButton();
-        jLabel9 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         txt_Contraseña1 = new javax.swing.JPasswordField();
-        btnVista = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -95,13 +90,6 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         jLabel3.setMinimumSize(new java.awt.Dimension(36, 14));
         kGradientPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 200, 40));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("Correo Electronico");
-        jLabel7.setMaximumSize(new java.awt.Dimension(36, 14));
-        jLabel7.setMinimumSize(new java.awt.Dimension(36, 14));
-        kGradientPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 200, 55));
-
         txt_Nombre.setBackground(new Color(0,0,0,0));
         txt_Nombre.setForeground(new java.awt.Color(255, 255, 255));
         txt_Nombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -123,17 +111,6 @@ public class Nuevo_Registro extends javax.swing.JFrame {
             }
         });
         kGradientPanel1.add(txt_Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 192, 30));
-
-        txt_Correo.setBackground(new Color(0,0,0,0));
-        txt_Correo.setForeground(new java.awt.Color(255, 255, 255));
-        txt_Correo.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_Correo.setOpaque(false);
-        txt_Correo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_CorreoActionPerformed(evt);
-            }
-        });
-        kGradientPanel1.add(txt_Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 192, 30));
 
         btnRegistrar.setText("Registrase");
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
@@ -164,13 +141,6 @@ public class Nuevo_Registro extends javax.swing.JFrame {
             }
         });
         kGradientPanel1.add(kButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 110, 40));
-
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mariano.png"))); // NOI18N
-        jLabel9.setText("Registrar Cuenta");
-        kGradientPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 220, 70));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -205,22 +175,11 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         });
         kGradientPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, 20, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Admin_3.png"))); // NOI18N
-        kGradientPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 60, 60));
-
         txt_Contraseña1.setBackground(new Color(0,0,0,0));
         txt_Contraseña1.setForeground(new java.awt.Color(255, 255, 255));
         txt_Contraseña1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_Contraseña1.setOpaque(false);
         kGradientPanel1.add(txt_Contraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 190, 30));
-
-        btnVista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icono ojo.jpg"))); // NOI18N
-        btnVista.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVistaActionPerformed(evt);
-            }
-        });
-        kGradientPanel1.add(btnVista, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 40, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,7 +189,10 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -244,41 +206,37 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_ContraseñaActionPerformed
 
-    private void txt_CorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CorreoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_CorreoActionPerformed
-
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
 
         if ( txt_Nombre.getText().isEmpty()
-            ||txt_Contraseña1.getText().isEmpty() ||txt_Correo.getText().isEmpty()  ){
+            ||txt_Contraseña1.getText().isEmpty()   ){
             JOptionPane.showMessageDialog(null, " NO PUEDE DEJAR CAMPOS VACIOS ");
 
             txt_Nombre.setText("");
 
             txt_Contraseña1.setText("");
-            txt_Correo.setText("");
+           
         }
         else {
 
             try{
                 Connection cn = DriverManager.getConnection(Contenedor.BD,Contenedor.Usuario,Contenedor.Contraseña);
 
-                PreparedStatement pst = cn.prepareStatement("insert into usuarios values(?,?,?,?)");
+                PreparedStatement pst = cn.prepareStatement("insert into usuario values(?,?,?)");
                 //en la variables pst de tipo coneccion a base de datos inserte
                 // pst.setString(1, "0");
                 pst.setString(1, "0");
                 pst.setString(2, txt_Nombre.getText().trim());
 
                 pst.setString(3, txt_Contraseña1.getText().trim());
-                pst.setString(4, txt_Correo.getText().trim());
+               
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null, " USUARIO REGISTRADO CORRECTAMENTE");
 
                 txt_Nombre.setText("");
 
                 txt_Contraseña1.setText("");
-                txt_Correo.setText("");
+                
                Registrarse ventana = new  Registrarse();
                ventana.setVisible(true);
                this.dispose();
@@ -328,26 +286,6 @@ public class Nuevo_Registro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void btnVistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVistaActionPerformed
-
-        if (mostrar ){
-            txt_Contraseña.setVisible(true);
-            txt_Contraseña1.setVisible(false);
-            txt_Contraseña.setText(txt_Contraseña1.getText());
-            mostrar = false;
-            
-        }else {
-            txt_Contraseña.setVisible(false);
-            txt_Contraseña1.setVisible(true);
-            txt_Contraseña1.setText(txt_Contraseña.getText());
-            mostrar = true;
-            
-        }
-
-
-// TODO add your handling code here:
-    }//GEN-LAST:event_btnVistaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -385,20 +323,15 @@ public class Nuevo_Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private keeptoo.KButton btnRegistrar;
-    private javax.swing.JButton btnVista;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private keeptoo.KButton kButton5;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JTextField txt_Contraseña;
     private javax.swing.JPasswordField txt_Contraseña1;
-    private javax.swing.JTextField txt_Correo;
     private javax.swing.JTextField txt_Nombre;
     // End of variables declaration//GEN-END:variables
 }
